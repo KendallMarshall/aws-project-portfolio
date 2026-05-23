@@ -4,7 +4,7 @@
 Built a highly available web application using EC2, ALB, Auto Scaling, and RDS.
 
 ## Architecture
-(Insert diagram here later)
+![Architecture Diagram](architecture/ha-webapp-architecture.png)
 
 ## AWS Services Used
 - EC2
