@@ -1,12 +1,24 @@
 # High Availability Web Application on AWS
 
 ## Overview
-Built a highly available web application using EC2, ALB, Auto Scaling, and RDS.
+
+This project demonstrates a highly available and scalable AWS web application architecture designed to survive EC2 instance failure and automatically distribute traffic across multiple Availability Zones.
+
+The environment uses an Application Load Balancer (ALB), Auto Scaling Group (ASG), Launch Templates, CloudWatch monitoring, and EC2 web servers to simulate a production-style cloud deployment.
 
 ## Architecture
 ![Architecture Diagram](architecture/ha-webapp-architecture.png)
 
+## Traffic Flow
+
+1. User sends request to the Application Load Balancer
+2. ALB forwards traffic to healthy EC2 instances
+3. Target Group performs health checks
+4. Auto Scaling Group replaces unhealthy instances automatically
+5. CloudWatch monitors CPU usage and scaling events
+
 ## AWS Services Used
+
 - EC2
 - Application Load Balancer
 - Auto Scaling Group
@@ -15,19 +27,66 @@ Built a highly available web application using EC2, ALB, Auto Scaling, and RDS.
 - CloudWatch
 
 ## Features
+
 - Multi-AZ deployment
 - Automatic scaling
 - Health checks
 - Fault tolerance
 
 ## Architecture Decisions
-Why you chose each service.
+
+### Application Load Balancer
+Used to distribute traffic across multiple EC2 instances and improve fault tolerance.
+
+### Auto Scaling Group
+Used to automatically replace failed EC2 instances and scale infrastructure during increased load.
+
+### Multi-AZ Deployment
+Improves high availability by reducing dependence on a single Availability Zone.
 
 ## Deployment Steps
-Step-by-step setup.
+
+1. Created VPC networking environment using default AWS VPC
+2. Configured security group with HTTP and SSH access
+3. Launched two Amazon Linux EC2 web servers
+4. Automated Apache installation using EC2 User Data
+5. Configured custom HTML landing pages for each instance
+6. Verified server accessibility using public IPv4 addresses
+7. Created Target Group for load balancing
+8. Registered EC2 instances as healthy targets
+9. Configured Application Load Balancer (ALB)
+10. Tested traffic distribution across multiple EC2 instances
+11. Implemented Auto Scaling Group with Launch Template
+12. Validated health checks and automatic recovery behavior
+
+## What I Learned
+
+- How Application Load Balancers distribute traffic
+- Why Multi-AZ deployments improve availability
+- How Auto Scaling Groups maintain infrastructure health
+- How Launch Templates automate deployments
+- How CloudWatch integrates with scaling policies
+- Importance of security group design
 
 ## Challenges
-Problems encountered and solutions.
+
+### Availability Zone Placement
+Initially launched both EC2 instances in the same Availability Zone. Corrected the deployment by relaunching one instance in a separate AZ to improve fault tolerance and simulate production-grade high availability architecture.
+
+### HTTP Connectivity Issues
+Encountered browser timeout errors when testing web server access. Resolved by verifying security group inbound rules and ensuring HTTP traffic on port 80 was allowed.
+
+### SSH Connection Troubleshooting
+Experienced issues reconnecting to EC2 instances after closing local terminal sessions. Learned how to properly reconnect using the PEM key and instance public IPv4 addresses.
+
+### User Data Automation Validation
+Validated that Apache installation and webpage deployment executed automatically during EC2 launch using User Data scripts, reducing manual server configuration steps.
 
 ## Future Improvements
-Things you'd improve later.
+
+- Add HTTPS using ACM
+- Register custom domain with Route53
+- Use Terraform for Infrastructure as Code
+- Deploy inside private/public subnet architecture
+- Add CI/CD pipeline with GitHub Actions
+- Containerize application with Docker
