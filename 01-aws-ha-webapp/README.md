@@ -4,7 +4,7 @@
 
 This project demonstrates a highly available and scalable AWS web application architecture designed to survive EC2 instance failure and automatically distribute traffic across multiple Availability Zones.
 
-The environment uses an Application Load Balancer (ALB), Auto Scaling Group (ASG), Launch Templates, CloudWatch monitoring, and EC2 web servers to simulate a production-style cloud deployment.
+The environment uses an Application Load Balancer (ALB), Auto Scaling Group (ASG), Launch Templates, Amazon RDS MySQL, CloudWatch monitoring, and EC2 web servers to simulate a production-style cloud deployment.
 
 ## Architecture
 ![Architecture Diagram](architecture/ha-webapp-architecture.png)
@@ -16,6 +16,7 @@ The environment uses an Application Load Balancer (ALB), Auto Scaling Group (ASG
 3. Target Group performs health checks
 4. Auto Scaling Group replaces unhealthy instances automatically
 5. CloudWatch monitors CPU usage and scaling events
+6. EC2 instances securely connect to the RDS MySQL database inside the VPC
 
 ## AWS Services Used
 
@@ -32,6 +33,8 @@ The environment uses an Application Load Balancer (ALB), Auto Scaling Group (ASG
 - Automatic scaling
 - Health checks
 - Fault tolerance
+- Managed MySQL database with Amazon RDS
+- Secure private database connectivity
 
 ## Architecture Decisions
 
@@ -40,6 +43,9 @@ Used to distribute traffic across multiple EC2 instances and improve fault toler
 
 ### Auto Scaling Group
 Used to automatically replace failed EC2 instances and scale infrastructure during increased load.
+
+### Amazon RDS
+Used Amazon RDS MySQL to provide managed relational database services with secure VPC networking and automated backups.
 
 ### Multi-AZ Deployment
 Improves high availability by reducing dependence on a single Availability Zone.
@@ -58,6 +64,9 @@ Improves high availability by reducing dependence on a single Availability Zone.
 10. Tested traffic distribution across multiple EC2 instances
 11. Implemented Auto Scaling Group with Launch Template
 12. Validated health checks and automatic recovery behavior
+13. Deployed Amazon RDS MySQL database inside the VPC
+14. Configured database security group access for EC2 connectivity
+15. Verified secure database networking and endpoint configuration
 
 ## What I Learned
 
@@ -67,6 +76,9 @@ Improves high availability by reducing dependence on a single Availability Zone.
 - How Launch Templates automate deployments
 - How CloudWatch integrates with scaling policies
 - Importance of security group design
+- How RDS integrates with EC2 applications securely inside a VPC
+- Difference between public and private database access
+- Basics of managed relational databases in AWS
 
 ## Challenges
 
@@ -90,3 +102,6 @@ Validated that Apache installation and webpage deployment executed automatically
 - Deploy inside private/public subnet architecture
 - Add CI/CD pipeline with GitHub Actions
 - Containerize application with Docker
+- Deploy RDS in private subnets
+- Configure Multi-AZ database deployment
+- Connect application dynamically to RDS endpoint
