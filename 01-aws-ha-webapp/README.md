@@ -30,31 +30,31 @@ The environment uses an Application Load Balancer (ALB), Auto Scaling Group (ASG
 
 ## Application Load Balancer
 
-![ALB Dashboard](alb-dashboard.png)
+![ALB Dashboard](screenshots/alb-dashboard.png)
 
 ## EC2 Instances
 
-![EC2 Instances](ec2-instances.png)
+![EC2 Instances](screenshots/ec2-instances.png)
 
 ## Auto Scaling Group
 
-![ASG](auto-scaling-group.png)
+![ASG](screenshots/auto-scaling-group.png)
 
 ## RDS Database
 
-![RDS Dashboard](rds-dashboard.png)
+![RDS Dashboard](screenshots/rds-dashboard.png)
 
 ## RDS Connectivity & Security
 
-![RDS Security](rds-connectivity-security.png)
+![RDS Security](screenshots/rds-connectivity-security.png)
 
 ## Stress Testing
 
-![Stress Test](stress-test.png)
+![Stress Test](screenshots/stress-test.png)
 
 ## Target Group Health Checks
 
-![Target Groups](target-groups.png)
+![Target Groups](screenshots/target-groups.png)
 
 ## Features
 
