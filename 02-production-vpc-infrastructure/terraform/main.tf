@@ -166,6 +166,14 @@ resource "aws_security_group" "private_app_sg" {
     security_groups = [aws_security_group.public_web_sg.id]
   }
 
+ingress {
+  description     = "Allow SSH from public web security group"
+  from_port       = 22
+  to_port         = 22
+  protocol        = "tcp"
+  security_groups = [aws_security_group.public_web_sg.id]
+}
+
   egress {
     description = "Allow outbound traffic through NAT Gateway"
     from_port   = 0
@@ -199,5 +207,26 @@ user_data_replace_on_change = true
 
   tags = {
     Name = "public-web-server"
+  }
+}
+resource "aws_instance" "private_app_server" {
+  ami                    = "ami-0c02fb55956c7d316"
+  instance_type          = "t2.micro"
+  subnet_id              = aws_subnet.private_subnet_a.id
+  vpc_security_group_ids = [aws_security_group.private_app_sg.id]
+
+key_name = "project-ascension-key"
+
+  user_data = <<-EOF
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl enable httpd
+systemctl start httpd
+echo "<h1>Private Application Server</h1>" > /var/www/html/index.html
+EOF
+
+  tags = {
+    Name = "private-app-server"
   }
 }
