@@ -21,6 +21,10 @@ All infrastructure was provisioned and destroyed using Terraform.
 
 ---
 
+## Architecture Diagram
+
+![Production VPC Architecture](architecture/production-vpc-architecture.png)
+
 ## Architecture Goals
 
 The primary goals of this project were to:
