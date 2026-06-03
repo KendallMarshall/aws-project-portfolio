@@ -8,7 +8,7 @@ The environment uses an Application Load Balancer (ALB), Auto Scaling Group (ASG
 
 ## Architecture
 
-![Architecture Diagram](architecture/ha-webapp-architecture.png)
+![Architecture Diagram](architecture/ha-webapp-architecture-v2.png)
 
 ## Traffic Flow
 
