@@ -5,7 +5,7 @@
 This project deploys a highly available web application infrastructure using Terraform. The environment includes an Application Load Balancer, Auto Scaling Group, Launch Template, private EC2 instances, CloudWatch monitoring, and a NAT Gateway for outbound internet access.
 
 The diagram below illustrates the complete traffic flow from the internet through the Application Load Balancer to EC2 instances running in private subnets, with an Auto Scaling Group providing high availability and self-healing across multiple Availability Zones.
-![Architecture Diagram](screenshots/01-architecture-diagram.png)
+![Architecture Diagram](screenshots/01-Architecture-diagram.png)
 
 ## Architecture Diagram
 
@@ -111,28 +111,28 @@ Configured CloudWatch alarms and Auto Scaling policies to automatically scale in
 
 ### Architecture Diagram
 
-![Architecture Diagram](screenshots/01-architecture-diagram.png)
+![Architecture Diagram](screenshots/01-Architecture-diagram.png)
 
 ### Application Load Balancer Webpage
 
-![ALB Webpage](screenshots/02-alb-webpage.png)
+![ALB Webpage](screenshots/02-ALB-Webpage.png)
 
 ### Auto Scaling Group Capacity
 
-![ASG Capacity](screenshots/03-asg-capacity.png)
+![ASG Capacity](screenshots/03-ASG-capacity.png)
 
 ### Healthy Target Group
 
-![Target Group Healthy](screenshots/04-target-groups-healthy.png)
+![Target Group Healthy](screenshots/04-Target-groups-healthy.png)
 
 ### CloudWatch Alarms
 
-![CloudWatch Alarms](screenshots/05-cloudwatch-alarms.png)
+![CloudWatch Alarms](screenshots/05-Cloudwatch-alarms.png)
 
 ### Scaling Policies
 
-![Scaling Policies](screenshots/06-scaling-policies.png)
+![Scaling Policies](screenshots/06-Scaling-policies.png)
 
 ### Self-Healing Test
 
-![Self-Healing Test](screenshots/07-self-healing-test.png)
+![Self-Healing Test](screenshots/07-Self-healing-test.png)
