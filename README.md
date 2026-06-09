@@ -79,6 +79,49 @@ Designed and deployed a production-style AWS VPC environment using Terraform and
 
 ---
 
+## 03 — Auto Scaling Web Application Infrastructure
+
+Designed and deployed a production-style auto-scaling web application environment using Terraform and Infrastructure as Code principles.
+
+### Infrastructure Included
+
+* Custom VPC
+* Public and private subnets across two Availability Zones
+* Internet Gateway
+* NAT Gateway
+* Application Load Balancer (ALB)
+* Auto Scaling Group (ASG)
+* Launch Template
+* CloudWatch Alarms
+* Security Groups
+* Private EC2 web servers
+
+### Features
+
+* Automatic scaling based on CPU utilization
+* CloudWatch-driven scale-in and scale-out policies
+* Self-healing infrastructure through Auto Scaling
+* Multi-AZ high availability architecture
+* Private EC2 instances behind a public ALB
+* Terraform-based provisioning and deployment
+* Full infrastructure lifecycle management
+
+### Skills Demonstrated
+
+* Terraform Infrastructure as Code
+* Auto Scaling Groups
+* Launch Templates
+* CloudWatch Monitoring
+* Load Balancing
+* High Availability Architecture
+* Self-Healing Infrastructure
+* AWS Networking
+* Infrastructure Automation
+
+🔗 [View Project](./03-auto-scaling-webapp)
+
+---
+
 # Technical Skills
 
 ## AWS Services
@@ -86,13 +129,15 @@ Designed and deployed a production-style AWS VPC environment using Terraform and
 * Amazon EC2
 * Amazon VPC
 * Auto Scaling Groups
-* Application Load Balancer
+* Launch Templates
+* Application Load Balancer (ALB)
 * CloudWatch
 * Security Groups
 * NAT Gateway
 * Internet Gateway
 * Route Tables
 * Elastic IP
+* Target Groups
 
 ## Infrastructure & DevOps
 
@@ -102,7 +147,9 @@ Designed and deployed a production-style AWS VPC environment using Terraform and
 * GitHub
 * Linux
 * SSH
-* Bash scripting
+* Bash Scripting
+* Terraform State Management
+* User Data Bootstrapping
 
 ## Cloud Concepts
 
@@ -113,18 +160,24 @@ Designed and deployed a production-style AWS VPC environment using Terraform and
 * Secure Infrastructure Design
 * Infrastructure Automation
 * Production Architecture Patterns
+* Load Balancing
+* Self-Healing Infrastructure
+* Monitoring & Alerting
 
 ---
 
 # Current Focus
 
-Currently building hands-on AWS projects focused on:
+Currently expanding into cloud automation, CI/CD, and production engineering workflows.
 
-* cloud infrastructure
-* automation
-* networking
-* scalability
-* production engineering concepts
+Upcoming areas of focus:
+
+* CI/CD Pipelines
+* GitHub Actions
+* Infrastructure Automation
+* DevOps Practices
+* Cloud Monitoring
+* Production Deployment Workflows
 
 ---
 
