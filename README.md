@@ -164,7 +164,7 @@ Designed and implemented a complete CI/CD pipeline on AWS that automatically dep
 - IAM Permissions Management
 - Application Deployment Workflows
 
-🔗 [View Project](./04-CI-CD-Automated-Web-App)
+🔗 [View Project](./04-CI:CD-Automated-Web-App)
 
 # Technical Skills
 
