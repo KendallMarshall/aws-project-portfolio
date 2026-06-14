@@ -8,7 +8,7 @@ Any code pushed to GitHub automatically triggers a deployment pipeline that buil
 
 ## Architecture
 
-[Architecture Diagram Here]
+![Architecture Diagram](screenshots/01-architecture-diagram.png)
 
 ## Technologies Used
 
