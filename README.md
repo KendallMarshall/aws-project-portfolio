@@ -122,6 +122,50 @@ Designed and deployed a production-style auto-scaling web application environmen
 
 ---
 
+## 04 — CI/CD Automated Web Application Deployment
+
+Designed and implemented a complete CI/CD pipeline on AWS that automatically deploys application updates from GitHub to an Auto Scaling Group behind an Application Load Balancer.
+
+### Infrastructure Included
+
+- GitHub Repository
+- AWS CodePipeline
+- AWS CodeBuild
+- AWS CodeDeploy
+- Application Load Balancer (ALB)
+- Auto Scaling Group (ASG)
+- Launch Template
+- EC2 Instances
+- IAM Roles and Policies
+- Terraform Infrastructure
+
+### Features
+
+- Automated deployment pipeline triggered by GitHub commits
+- Continuous Integration using AWS CodeBuild
+- Continuous Deployment using AWS CodeDeploy
+- Zero manual SSH deployment process
+- Deployment lifecycle hooks using AppSpec and Bash scripts
+- Infrastructure provisioning with Terraform
+- End-to-end deployment validation through CodePipeline
+- Production-style CI/CD workflow
+
+### Skills Demonstrated
+
+- CI/CD Pipeline Design
+- AWS CodePipeline
+- AWS CodeBuild
+- AWS CodeDeploy
+- Git & GitHub Integration
+- Infrastructure as Code (Terraform)
+- Deployment Automation
+- Linux Administration
+- Bash Scripting
+- IAM Permissions Management
+- Application Deployment Workflows
+
+🔗 [🔗 View Project](./04-CI-CD-Automated-Web-App)
+
 # Technical Skills
 
 ## AWS Services
@@ -138,6 +182,9 @@ Designed and deployed a production-style auto-scaling web application environmen
 * Route Tables
 * Elastic IP
 * Target Groups
+* AWS CodePipeline
+* AWS CodeBuild
+* AWS CodeDeploy
 
 ## Infrastructure & DevOps
 
@@ -150,6 +197,9 @@ Designed and deployed a production-style auto-scaling web application environmen
 * Bash Scripting
 * Terraform State Management
 * User Data Bootstrapping
+* CI/CD Pipelines
+* YAML
+* Deployment Automation
 
 ## Cloud Concepts
 
@@ -172,7 +222,7 @@ Currently expanding into cloud automation, CI/CD, and production engineering wor
 
 Upcoming areas of focus:
 
-* CI/CD Pipelines
+* Cloud Operations (SysOps)
 * GitHub Actions
 * Infrastructure Automation
 * DevOps Practices
