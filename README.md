@@ -166,6 +166,50 @@ Designed and implemented a complete CI/CD pipeline on AWS that automatically dep
 
 🔗 [View Project](./04-CI:CD-Automated-Web-App)
 
+---
+
+## 05 — Serverless Task Tracker Application
+
+Built a fully serverless task management application on AWS using API Gateway, Lambda, and DynamoDB.
+
+### Infrastructure Included
+
+- React Frontend
+- Amazon API Gateway
+- AWS Lambda Functions
+- Amazon DynamoDB
+- RESTful API Endpoints
+- IAM Roles and Permissions
+- CloudShell Testing Environment
+
+### Features
+
+- Create tasks using POST requests
+- Retrieve tasks using GET requests
+- Update task status using PUT requests
+- Delete tasks using DELETE requests
+- Serverless event-driven architecture
+- Persistent task storage with DynamoDB
+- API-driven backend design
+- No servers to provision or manage
+
+### Skills Demonstrated
+
+- Serverless Architecture
+- AWS Lambda
+- Amazon API Gateway
+- Amazon DynamoDB
+- REST API Design
+- CRUD Operations
+- JSON Data Handling
+- Event-Driven Computing
+- IAM Permissions Management
+- Backend Application Development
+
+🔗 [View Project](./05-serverless-task-tracker)
+
+---
+
 # Technical Skills
 
 ## AWS Services
@@ -185,6 +229,9 @@ Designed and implemented a complete CI/CD pipeline on AWS that automatically dep
 * AWS CodePipeline
 * AWS CodeBuild
 * AWS CodeDeploy
+* AWS Lambda
+* Amazon API Gateway
+* Amazon DynamoDB
 
 ## Infrastructure & DevOps
 
@@ -213,6 +260,9 @@ Designed and implemented a complete CI/CD pipeline on AWS that automatically dep
 * Load Balancing
 * Self-Healing Infrastructure
 * Monitoring & Alerting
+* Serverless Computing
+* REST APIs
+* Event-Driven Architecture
 
 ---
 
@@ -231,4 +281,4 @@ Upcoming areas of focus:
 
 ---
 
-More projects coming soon.
+Currently focused on Cloud Operations (SysOps), interview preparation, and pursuing my first cloud engineering role.
